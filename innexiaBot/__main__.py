@@ -86,18 +86,18 @@ buttons = [
     ],
     [
         InlineKeyboardButton(
-            text="📡𝗡𝗘𝗧𝗪𝗢𝗥𝗞", url=f"https://t.me/rockstar_xdd"),
+            text="📡𝗡𝗘𝗧𝗪𝗢𝗥𝗞", url=f"https://t.me/starz_network"),
     ],
     [
-        InlineKeyboardButton(text="🔱 𝗗𝗘𝗩 🔱", url=f"https://t.me/Florenza_Devs"),
+        InlineKeyboardButton(text="🔱 𝗗𝗘𝗩 🔱", url=f"https://t.me/Rockstar_xdd"),
         InlineKeyboardButton(
             text="𝗩𝗖 𝗣𝗟𝗔𝗬𝗘𝗥🎵", url=f"https://telegram.dog/Florenza_Assistant"
         ),
     ],
     [
-        InlineKeyboardButton(text="🚑 𝗦𝗨𝗣𝗣𝗢𝗥𝗧🚑", url=f"https://t.me/Florenza_support"),
+        InlineKeyboardButton(text="🚑 𝗦𝗨𝗣𝗣𝗢𝗥𝗧🚑", url=f"https://t.me/Florenzasupport"),
         InlineKeyboardButton(
-            text="𝗨𝗣𝗗𝗔𝗧𝗘𝗦", url=f"https://t.me/Florenza_updates"
+            text="𝗨𝗣𝗗𝗔𝗧𝗘𝗦", url=f"https://t.me/Florenzaupdates"
         ),
     ],
     [
