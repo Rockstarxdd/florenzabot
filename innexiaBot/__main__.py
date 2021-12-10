@@ -82,26 +82,26 @@ PM_START_TEXT = """
 buttons = [
     [
         InlineKeyboardButton(
-            text="🚀 ᴀᴅᴅ ꜰʟᴏʀᴇɴᴢᴀ ᴛᴏ ʏᴏᴜʀ ᴄʜᴀᴛ 🚀", url="http://t.me/Florenza_bot?startgroup=true"),
+            text="🚀 𝗔𝗗𝗗 𝗙𝗟𝗢𝗥𝗘𝗡𝗭𝗔 𝗧𝗢 𝗬𝗢𝗨𝗥 𝗖𝗛𝗔𝗧𝗦 🚀", url="http://t.me/Florenza_bot?startgroup=true"),
     ],
     [
         InlineKeyboardButton(
-            text="📜 Your Info", url="tg://settings"),
+            text="📡𝗡𝗘𝗧𝗪𝗢𝗥𝗞", url=f"https://t.me/rockstar_xdd"),
     ],
     [
-        InlineKeyboardButton(text="🔱 ᴅᴇᴠꜱ 🔱", url=f"https://t.me/Florenza_Devs"),
+        InlineKeyboardButton(text="🔱 𝗗𝗘𝗩 🔱", url=f"https://t.me/Florenza_Devs"),
         InlineKeyboardButton(
-            text="🎵 ᴠᴄ ᴘʟᴀʏᴇʀ 🎵", url=f"https://telegram.dog/Florenza_Assistant"
+            text="𝗩𝗖 𝗣𝗟𝗔𝗬𝗘𝗥🎵", url=f"https://telegram.dog/Florenza_Assistant"
         ),
     ],
     [
-        InlineKeyboardButton(text="🚑 ꜱᴜᴘᴘᴏʀᴛ 🚑", url=f"https://t.me/Florenza_support"),
+        InlineKeyboardButton(text="🚑 𝗦𝗨𝗣𝗣𝗢𝗥𝗧🚑", url=f"https://t.me/Florenza_support"),
         InlineKeyboardButton(
-            text="ᴜᴘᴅᴀᴛᴇꜱ 🚨", url=f"https://t.me/Florenza_updates"
+            text="𝗨𝗣𝗗𝗔𝗧𝗘𝗦", url=f"https://t.me/Florenza_updates"
         ),
     ],
     [
-        InlineKeyboardButton(text="📚 Cᴏᴍᴍᴀɴᴅꜱ", callback_data="help_back"),
+        InlineKeyboardButton(text="𝗖𝗢𝗠𝗠𝗔𝗡𝗗𝗦", callback_data="help_back"),
     ],
 ]
 
