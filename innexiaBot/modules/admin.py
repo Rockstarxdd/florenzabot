@@ -1070,7 +1070,7 @@ __help__ = """
   ❍ `/setsticker`*:* Set group sticker
 """
 
-SET_DESC_HANDLER = CommandHandler("setdesc", set_desc, filters=Filters.chat_type.groups, run_async=True)
+SET_DESC_HANDLER = CommandHandler("setdesc", set_desc, filters=Filters.group, run_async=True)
 SET_STICKER_HANDLER = CommandHandler("setsticker", set_sticker, filters=Filters.chat_type.groups, run_async=True)
 SETCHATPIC_HANDLER = CommandHandler("setgpic", setchatpic, filters=Filters.chat_type.groups, run_async=True)
 RMCHATPIC_HANDLER = CommandHandler("delgpic", rmchatpic, filters=Filters.chat_type.groups, run_async=True)
