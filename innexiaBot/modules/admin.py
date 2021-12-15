@@ -99,6 +99,7 @@ async def get_users(show):
 
 @bot_admin
 @user_admin
+@run_async
 def set_sticker(update: Update, context: CallbackContext):
     msg = update.effective_message
     chat = update.effective_chat
@@ -128,6 +129,7 @@ def set_sticker(update: Update, context: CallbackContext):
     
 @bot_admin
 @user_admin
+@run_async
 def setchatpic(update: Update, context: CallbackContext):
     chat = update.effective_chat
     msg = update.effective_message
@@ -163,6 +165,7 @@ def setchatpic(update: Update, context: CallbackContext):
         
 @bot_admin
 @user_admin
+@run_async
 def rmchatpic(update: Update, context: CallbackContext):
     chat = update.effective_chat
     msg = update.effective_message
@@ -180,6 +183,7 @@ def rmchatpic(update: Update, context: CallbackContext):
     
 @bot_admin
 @user_admin
+@run_async
 def set_desc(update: Update, context: CallbackContext):
     msg = update.effective_message
     chat = update.effective_chat
@@ -203,6 +207,7 @@ def set_desc(update: Update, context: CallbackContext):
         
 @bot_admin
 @user_admin
+@run_async
 def setchat_title(update: Update, context: CallbackContext):
     chat = update.effective_chat
     msg = update.effective_message
@@ -234,6 +239,7 @@ def setchat_title(update: Update, context: CallbackContext):
 @can_promote
 @user_admin
 @loggable
+@run_async
 def promote(update: Update, context: CallbackContext) -> str:
     bot = context.bot
     args = context.args
@@ -315,6 +321,7 @@ def promote(update: Update, context: CallbackContext) -> str:
 @can_promote
 @user_admin
 @loggable
+@run_async
 def midpromote(update: Update, context: CallbackContext) -> str:
     bot = context.bot
     args = context.args
@@ -391,6 +398,7 @@ def midpromote(update: Update, context: CallbackContext) -> str:
 @can_promote
 @user_admin
 @loggable
+@run_async
 def lowpromote(update: Update, context: CallbackContext) -> str:
     bot = context.bot
     args = context.args
@@ -467,6 +475,7 @@ def lowpromote(update: Update, context: CallbackContext) -> str:
 @can_promote
 @user_admin
 @loggable
+@run_async
 def fullpromote(update: Update, context: CallbackContext) -> str:
     bot = context.bot
     args = context.args
@@ -633,6 +642,7 @@ async def lowdemote(dmod):
 @can_promote
 @user_admin
 @loggable
+@run_async
 def demote(update: Update, context: CallbackContext) -> str:
     bot = context.bot
     args = context.args
@@ -701,6 +711,7 @@ def demote(update: Update, context: CallbackContext) -> str:
 
 
 @user_admin
+@run_async
 def refresh_admin(update, _):
     try:
         ADMIN_CACHE.pop(update.effective_chat.id)
@@ -714,6 +725,7 @@ def refresh_admin(update, _):
 @bot_admin
 @can_promote
 @user_admin
+@run_async
 def set_title(update: Update, context: CallbackContext):
     bot = context.bot
     args = context.args
@@ -780,6 +792,7 @@ def set_title(update: Update, context: CallbackContext):
 @can_pin
 @user_admin
 @loggable
+@run_async
 def pin(update, context):
     bot, args = context.bot, context.args
     user = update.effective_user
@@ -829,6 +842,7 @@ def pin(update, context):
 @can_pin
 @user_admin
 @loggable
+@run_async
 def unpin(update, context):
     bot = context.bot
     chat = update.effective_chat
@@ -861,6 +875,7 @@ def unpin(update, context):
 
 
 @bot_admin
+@run_async
 def pinned(update: Update, context: CallbackContext) -> str:
     bot = context.bot
     msg = update.effective_message
@@ -884,6 +899,7 @@ def pinned(update: Update, context: CallbackContext) -> str:
 @bot_admin
 @user_admin
 @connection_status
+@run_async
 def invite(update: Update, context: CallbackContext):
     bot = context.bot
     chat = update.effective_chat
@@ -906,6 +922,7 @@ def invite(update: Update, context: CallbackContext):
 
 
 @connection_status
+@run_async
 def adminlist(update, context):
     chat = update.effective_chat  # type: Optional[Chat] -> unused variable
     user = update.effective_user  # type: Optional[User]
@@ -1070,28 +1087,28 @@ __help__ = """
   ❍ `/setsticker`*:* Set group sticker
 """
 
-SET_DESC_HANDLER = CommandHandler("setdesc", set_desc, filters=Filters.group, run_async=True)
-SET_STICKER_HANDLER = CommandHandler("setsticker", set_sticker, filters=Filters.chat_type.groups, run_async=True)
-SETCHATPIC_HANDLER = CommandHandler("setgpic", setchatpic, filters=Filters.chat_type.groups, run_async=True)
-RMCHATPIC_HANDLER = CommandHandler("delgpic", rmchatpic, filters=Filters.chat_type.groups, run_async=True)
-SETCHAT_TITLE_HANDLER = CommandHandler("setgtitle", setchat_title, filters=Filters.chat_type.groups, run_async=True)
+SET_DESC_HANDLER = CommandHandler("setdesc", set_desc, filters=Filters.group)
+SET_STICKER_HANDLER = CommandHandler("setsticker", set_sticker, filters=Filters.chat_type.groups)
+SETCHATPIC_HANDLER = CommandHandler("setgpic", setchatpic, filters=Filters.chat_type.groups)
+RMCHATPIC_HANDLER = CommandHandler("delgpic", rmchatpic, filters=Filters.chat_type.groups)
+SETCHAT_TITLE_HANDLER = CommandHandler("setgtitle", setchat_title, filters=Filters.chat_type.groups)
 
-ADMINLIST_HANDLER = DisableAbleCommandHandler(["admins", "adminlist"], adminlist, run_async=True)
+ADMINLIST_HANDLER = DisableAbleCommandHandler(["admins", "adminlist"], adminlist)
 
-PIN_HANDLER = CommandHandler("pin", pin, filters=Filters.chat_type.groups, run_async=True)
-UNPIN_HANDLER = CommandHandler("unpin", unpin, filters=Filters.chat_type.groups, run_async=True)
-PINNED_HANDLER = CommandHandler("pinned", pinned, filters=Filters.chat_type.groups, run_async=True)
+PIN_HANDLER = CommandHandler("pin", pin, filters=Filters.chat_type.groups)
+UNPIN_HANDLER = CommandHandler("unpin", unpin, filters=Filters.chat_type.groups)
+PINNED_HANDLER = CommandHandler("pinned", pinned, filters=Filters.chat_type.groups)
 
-INVITE_HANDLER = DisableAbleCommandHandler("invitelink", invite, run_async=True)
+INVITE_HANDLER = DisableAbleCommandHandler("invitelink", invite)
 
-PROMOTE_HANDLER = DisableAbleCommandHandler("promote", promote, run_async=True)
-FULLPROMOTE_HANDLER = DisableAbleCommandHandler("fullpromote", fullpromote, run_async=True)
-LOW_PROMOTE_HANDLER = DisableAbleCommandHandler("lowpromote", lowpromote, run_async=True)
-MID_PROMOTE_HANDLER = DisableAbleCommandHandler("midpromote", midpromote, run_async=True)
-DEMOTE_HANDLER = DisableAbleCommandHandler("demote", demote, run_async=True)
+PROMOTE_HANDLER = DisableAbleCommandHandler("promote", promote)
+FULLPROMOTE_HANDLER = DisableAbleCommandHandler("fullpromote", fullpromote)
+LOW_PROMOTE_HANDLER = DisableAbleCommandHandler("lowpromote", lowpromote)
+MID_PROMOTE_HANDLER = DisableAbleCommandHandler("midpromote", midpromote)
+DEMOTE_HANDLER = DisableAbleCommandHandler("demote", demote)
 
-SET_TITLE_HANDLER = CommandHandler("title", set_title, run_async=True)
-ADMIN_REFRESH_HANDLER = CommandHandler("admincache", refresh_admin, filters=Filters.chat_type.groups, run_async=True)
+SET_TITLE_HANDLER = CommandHandler("title", set_title)
+ADMIN_REFRESH_HANDLER = CommandHandler("admincache", refresh_admin, filters=Filters.group)
 
 dispatcher.add_handler(SET_DESC_HANDLER)
 dispatcher.add_handler(SET_STICKER_HANDLER)
