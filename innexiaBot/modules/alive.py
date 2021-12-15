@@ -8,7 +8,7 @@ PHOTO = "https://telegra.ph/file/16bf7f2e7ca1543cb7694.jpg"
 async def awake(event):
   LOVELY = event.sender.first_name
   LOVELY = "**❣️ I'm Working Properly ** \n\n"
-  LOVELY += "**❣️ My Master : [Rockstar](t.me/Always_Rockstar) *\n\n"
+  LOVELY += "**❣️ My Master : [Rockstar](t.me/ROCKSTAR_XDD) *\n\n"
   LOVELY += "**❣️ Library Version : `13.7` **\n\n"
   LOVELY += "**Telethon Version : `1.24.0` \n\n"
   LOVELY += "**Pyrogram Version : `1.2.20` \n\n"
