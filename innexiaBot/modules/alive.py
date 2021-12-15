@@ -14,4 +14,3 @@ async def awake(event):
   LOVELY += "**Pyrogram Version : `1.2.20` \n\n"
   BUTTON = [[Button.url("𝗦𝗨𝗣𝗣𝗢𝗥𝗧🙂", "https://t.me/FlorenzaSupport"), Button.url("𝗨𝗣𝗗𝗔𝗧𝗘", "https://t.me/FlorenzaUpdates")]]
   await love.send_file(event.chat_id, PHOTO, caption=LOVELY,  buttons=BUTTON)
-© 2021 GitHub, Inc.
